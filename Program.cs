@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Globalization;
+
 namespace CSharpPractices
 {
     class Program
@@ -142,11 +144,12 @@ namespace CSharpPractices
             /*            //Finding Path to your desktop
                         string pathToDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop;
 
-                        Console.WriteLine("Path to desktop: " + pathToDesktop);*/
+                        Console.WriteLine("Path to desktop: " + pathToDesktop);
+            */
 
             //Ch7 - More about objects
 
-            string text = "This is the last day of our acquaintance";
+/*            string text = "This is the last day of our acquaintance";
 
             //Outputs of what can be done with string objects
             Console.WriteLine("Original text: " + text);
@@ -154,8 +157,33 @@ namespace CSharpPractices
             Console.WriteLine("In uppercase: " + text.ToUpper());
             Console.WriteLine("Does it contain word \"last\"? " 
                 + text.Contains("last"));
+*/
+
+/*            //Converting numbers to different formats
+            double amount = 1234.56;
+            double anotherAmt = 789;
+            int wholeNum = 1234567;
+            double decimalNum = 1234567.89;
+
+            //Formatted outputs
+            Console.WriteLine("Separating thousands and millions + money to cents");
+            Console.WriteLine(amount.ToString("N2")); //N means thousand separation is required
+            Console.WriteLine(anotherAmt.ToString("N2")); //2 or 0 denote the numebr of decimal places in the output
+            Console.WriteLine(wholeNum.ToString("N0"));
+
+            //Localization objects
+            CultureInfo czech = new CultureInfo("cs-CZ");
+            CultureInfo american = new CultureInfo("en-US");
+
+            //Localized output
+            Console.WriteLine("Whole number - Czech: " + wholeNum.ToString("N0", czech));
+            Console.WriteLine("Whole number - American: " + wholeNum.ToString("N0", american));
 
 
+            Console.WriteLine("Whole number - Czech: " + decimalNum.ToString("N2", czech));
+            Console.WriteLine("Whole number - American: " + decimalNum.ToString("N2", american));
+ */
+            
         }
     }
 }
