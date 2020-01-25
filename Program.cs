@@ -149,41 +149,72 @@ namespace CSharpPractices
 
             //Ch7 - More about objects
 
-/*            string text = "This is the last day of our acquaintance";
+            /*            string text = "This is the last day of our acquaintance";
 
-            //Outputs of what can be done with string objects
-            Console.WriteLine("Original text: " + text);
-            Console.WriteLine("Number of characters: " + text.Length);
-            Console.WriteLine("In uppercase: " + text.ToUpper());
-            Console.WriteLine("Does it contain word \"last\"? " 
-                + text.Contains("last"));
-*/
+                        //Outputs of what can be done with string objects
+                        Console.WriteLine("Original text: " + text);
+                        Console.WriteLine("Number of characters: " + text.Length);
+                        Console.WriteLine("In uppercase: " + text.ToUpper());
+                        Console.WriteLine("Does it contain word \"last\"? " 
+                            + text.Contains("last"));
+            */
 
-/*            //Converting numbers to different formats
-            double amount = 1234.56;
-            double anotherAmt = 789;
-            int wholeNum = 1234567;
-            double decimalNum = 1234567.89;
+            /*            //Converting numbers to different formats
+                        double amount = 1234.56;
+                        double anotherAmt = 789;
+                        int wholeNum = 1234567;
+                        double decimalNum = 1234567.89;
 
-            //Formatted outputs
-            Console.WriteLine("Separating thousands and millions + money to cents");
-            Console.WriteLine(amount.ToString("N2")); //N means thousand separation is required
-            Console.WriteLine(anotherAmt.ToString("N2")); //2 or 0 denote the numebr of decimal places in the output
-            Console.WriteLine(wholeNum.ToString("N0"));
+                        //Formatted outputs
+                        Console.WriteLine("Separating thousands and millions + money to cents");
+                        Console.WriteLine(amount.ToString("N2")); //N means thousand separation is required
+                        Console.WriteLine(anotherAmt.ToString("N2")); //2 or 0 denote the numebr of decimal places in the output
+                        Console.WriteLine(wholeNum.ToString("N0"));
 
-            //Localization objects
-            CultureInfo czech = new CultureInfo("cs-CZ");
-            CultureInfo american = new CultureInfo("en-US");
+                        //Localization objects
+                        CultureInfo czech = new CultureInfo("cs-CZ");
+                        CultureInfo american = new CultureInfo("en-US");
 
-            //Localized output
-            Console.WriteLine("Whole number - Czech: " + wholeNum.ToString("N0", czech));
-            Console.WriteLine("Whole number - American: " + wholeNum.ToString("N0", american));
+                        //Localized output
+                        Console.WriteLine("Whole number - Czech: " + wholeNum.ToString("N0", czech));
+                        Console.WriteLine("Whole number - American: " + wholeNum.ToString("N0", american));
 
 
-            Console.WriteLine("Whole number - Czech: " + decimalNum.ToString("N2", czech));
-            Console.WriteLine("Whole number - American: " + decimalNum.ToString("N2", american));
- */
-            
+                        Console.WriteLine("Whole number - Czech: " + decimalNum.ToString("N2", czech));
+                        Console.WriteLine("Whole number - American: " + decimalNum.ToString("N2", american));
+             */
+            //Ch8 - Input
+
+            //Console.Write does not transfer the cursor to the next line
+
+            //Calculating Date of Birth
+            /*            Console.Write("Enter your year of birth: ");
+                        string input = Console.ReadLine();
+                        int enteredYear = Convert.ToInt32(input);
+
+                        DateTime today = DateTime.Today;
+                        int thisYear = today.Year;
+
+                        int age = thisYear - enteredYear;
+
+                        Console.WriteLine("This year you are/will be: " + age);
+             */
+            //Handling invalid input
+            Console.Write("Enter 1. number: ");
+            string input1 = Console.ReadLine();
+            int num1 = Convert.ToInt32(input1);
+
+            Console.Write("Enter 2. number: ");
+            string input2 = Console.ReadLine();
+            int num2 = Convert.ToInt32(input2);
+
+            int result = num1 + num2;
+
+            Console.WriteLine("Sum of entered number is: " + result);
+
+
+
+
         }
     }
 }
