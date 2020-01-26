@@ -262,7 +262,7 @@ namespace CSharpPractices
             */
 
             //Handling divisions with intergers
-            Console.Write("Enter 1. whole number (dividend): ");
+/*            Console.Write("Enter 1. whole number (dividend): ");
             string input1 = Console.ReadLine();
             int number1 = Convert.ToInt32(input1);
 
@@ -288,6 +288,60 @@ namespace CSharpPractices
                 + " with remainder " + remainder);
             Console.WriteLine("\"Normal\" quotient: " + normalQuotient);
             Console.WriteLine("\"Normal\" quotient(alernatively): " + normalQuotientAlt);
+*/
+           
+/*            //Math Rounding
+            double num1 = 1234.567;
+            double num2 = 9.876;
+            
+            //Number rounding
+            double roundedNum1 = Math.Round(num1, 2); //2 = two decimal places
+            
+            //Rounding for output only
+            string outputRounded2 = num2.ToString("N2");
+
+            Console.WriteLine(roundedNum1);
+            Console.WriteLine(outputRounded2);
+*/
+ /*           //More complicated rounding
+            double amount = 1234.562;
+
+            //To dollars 
+            double nearest = Math.Round(amount);
+            double alwaysUp = Math.Ceiling(amount);
+            double alwaysDown = Math.Floor(amount);
+
+            Console.WriteLine();
+            Console.WriteLine("To Dollars:");
+            Console.WriteLine("Nearest: " + nearest);
+            Console.WriteLine("Always Down: " +alwaysDown);
+            Console.WriteLine("Always Up: " +alwaysUp);
+
+            //To Cents
+            nearest = Math.Round(amount, 2);
+            alwaysUp = Math.Ceiling(100 * amount) / 100;
+            alwaysDown = Math.Floor(100 * amount) / 100;
+
+            Console.WriteLine();
+            Console.WriteLine("To Cents:");
+            Console.WriteLine("Nearest: " + nearest);
+            Console.WriteLine("Always Down: " + alwaysDown);
+            Console.WriteLine("Always Up: " + alwaysUp);
+
+            //To hundreds of dollars
+            nearest = 100 * Math.Round(amount / 100);
+            alwaysDown = 100 * Math.Floor(amount / 100);
+            alwaysUp = 100 * Math.Ceiling(amount / 100);
+
+            Console.WriteLine();
+            Console.WriteLine("To hundreds of dollars:");
+            Console.WriteLine("Nearest: " + nearest);
+            Console.WriteLine("Always Down: " + alwaysDown);
+            Console.WriteLine("Always Up: " + alwaysUp);
+*/
+
+
+            //
 
             //Waiting for Enter
             Console.ReadLine();
