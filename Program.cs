@@ -188,7 +188,7 @@ namespace CSharpPractices
             //Console.Write does not transfer the cursor to the next line
 
             //Calculating Date of Birth
-            /*            Console.Write("Enter your year of birth: ");
+            /*          Console.Write("Enter your year of birth: ");
                         string input = Console.ReadLine();
                         int enteredYear = Convert.ToInt32(input);
 
@@ -200,21 +200,68 @@ namespace CSharpPractices
                         Console.WriteLine("This year you are/will be: " + age);
              */
             //Handling invalid input
-            Console.Write("Enter 1. number: ");
-            string input1 = Console.ReadLine();
-            int num1 = Convert.ToInt32(input1);
+            /*            try
+                        {
+                            Console.Write("Enter 1. number: ");
+                            string input1 = Console.ReadLine();
+                            int num1 = Convert.ToInt32(input1);
 
-            Console.Write("Enter 2. number: ");
-            string input2 = Console.ReadLine();
-            int num2 = Convert.ToInt32(input2);
+                            Console.Write("Enter 2. number: ");
+                            string input2 = Console.ReadLine();
+                            int num2 = Convert.ToInt32(input2);
 
-            int result = num1 + num2;
+                            int result = num1 + num2;
 
-            Console.WriteLine("Sum of entered number is: " + result);
+                            Console.WriteLine("Sum of entered number is: " + result);
+                        }
+                        catch (Exception)
+                        {
 
+                            Console.WriteLine("Incorrect input - cannot calculate");
+                        }
+            */
+            // Ch9 - Numbers 
 
+            //AMERICAN
+            CultureInfo american = new CultureInfo("en-US");
+            try
+            {
+                //Input 
+                Console.Write("Enter American decimal number: ");
+                string input = Console.ReadLine();
+                double number = Convert.ToDouble(input, american);
 
+                //Output
+                Console.WriteLine("You have entered " + number);
 
+            }
+            catch (Exception)
+            {
+                //Error Message
+                Console.WriteLine("Incorrect input");
+            }
+
+            //SPANISH
+            CultureInfo spanish = new CultureInfo("es-ES");
+            try
+            {
+                //Input
+                Console.WriteLine();
+                Console.Write("Enter Spanish decimal number: ");
+                string input = Console.ReadLine();
+                double number = Convert.ToDouble(input, spanish);
+
+                //Output
+                Console.WriteLine("You have entered: " + number);
+            }
+            catch (Exception)
+            {
+                //Error message
+                Console.WriteLine("Incorrect input");
+            }
+
+            //Waiting for Enter
+            Console.ReadLine();
         }
     }
 }
