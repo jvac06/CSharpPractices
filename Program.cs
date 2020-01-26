@@ -222,43 +222,72 @@ namespace CSharpPractices
             */
             // Ch9 - Numbers 
 
-            //AMERICAN
-            CultureInfo american = new CultureInfo("en-US");
-            try
-            {
-                //Input 
-                Console.Write("Enter American decimal number: ");
-                string input = Console.ReadLine();
-                double number = Convert.ToDouble(input, american);
+            /*            //AMERICAN
+                        CultureInfo american = new CultureInfo("en-US");
+                        try
+                        {
+                            //Input 
+                            Console.Write("Enter American decimal number: ");
+                            string input = Console.ReadLine();
+                            double number = Convert.ToDouble(input, american);
 
-                //Output
-                Console.WriteLine("You have entered " + number);
+                            //Output
+                            Console.WriteLine("You have entered " + number);
 
-            }
-            catch (Exception)
-            {
-                //Error Message
-                Console.WriteLine("Incorrect input");
-            }
+                        }
+                        catch (Exception)
+                        {
+                            //Error Message
+                            Console.WriteLine("Incorrect input");
+                        }
 
-            //SPANISH
-            CultureInfo spanish = new CultureInfo("es-ES");
-            try
-            {
-                //Input
-                Console.WriteLine();
-                Console.Write("Enter Spanish decimal number: ");
-                string input = Console.ReadLine();
-                double number = Convert.ToDouble(input, spanish);
+                        //SPANISH
+                        CultureInfo spanish = new CultureInfo("es-ES");
+                        try
+                        {
+                            //Input
+                            Console.WriteLine();
+                            Console.Write("Enter Spanish decimal number: ");
+                            string input = Console.ReadLine();
+                            double number = Convert.ToDouble(input, spanish);
 
-                //Output
-                Console.WriteLine("You have entered: " + number);
-            }
-            catch (Exception)
-            {
-                //Error message
-                Console.WriteLine("Incorrect input");
-            }
+                            //Output
+                            Console.WriteLine("You have entered: " + number);
+                        }
+                        catch (Exception)
+                        {
+                            //Error message
+                            Console.WriteLine("Incorrect input");
+                        }
+            */
+
+            //Handling divisions with intergers
+            Console.Write("Enter 1. whole number (dividend): ");
+            string input1 = Console.ReadLine();
+            int number1 = Convert.ToInt32(input1);
+
+            Console.Write("Enter 2. whole number (divisor): ");
+            string input2 = Console.ReadLine();
+            int number2 = Convert.ToInt32(input2);
+
+            //Interger Calculations
+            int intergerQuotient = number1 / number2;
+            int remainder = number1 % number2;
+
+            //"Normal" Calculations with decimals
+            double number1double = number1;
+            double number2double = number2;
+            double normalQuotient = number1double / number2double;
+
+            //Alternatively
+            double normalQuotientAlt = (double)number1 / (double)number2;
+
+            //Outputs
+            Console.WriteLine("----------------");
+            Console.WriteLine("Interger quotient: " + intergerQuotient
+                + " with remainder " + remainder);
+            Console.WriteLine("\"Normal\" quotient: " + normalQuotient);
+            Console.WriteLine("\"Normal\" quotient(alernatively): " + normalQuotientAlt);
 
             //Waiting for Enter
             Console.ReadLine();
