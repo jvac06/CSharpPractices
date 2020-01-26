@@ -262,89 +262,123 @@ namespace CSharpPractices
             */
 
             //Handling divisions with intergers
-/*            Console.Write("Enter 1. whole number (dividend): ");
-            string input1 = Console.ReadLine();
-            int number1 = Convert.ToInt32(input1);
+            /*            Console.Write("Enter 1. whole number (dividend): ");
+                        string input1 = Console.ReadLine();
+                        int number1 = Convert.ToInt32(input1);
 
-            Console.Write("Enter 2. whole number (divisor): ");
-            string input2 = Console.ReadLine();
-            int number2 = Convert.ToInt32(input2);
+                        Console.Write("Enter 2. whole number (divisor): ");
+                        string input2 = Console.ReadLine();
+                        int number2 = Convert.ToInt32(input2);
 
-            //Interger Calculations
-            int intergerQuotient = number1 / number2;
-            int remainder = number1 % number2;
+                        //Interger Calculations
+                        int intergerQuotient = number1 / number2;
+                        int remainder = number1 % number2;
 
-            //"Normal" Calculations with decimals
-            double number1double = number1;
-            double number2double = number2;
-            double normalQuotient = number1double / number2double;
+                        //"Normal" Calculations with decimals
+                        double number1double = number1;
+                        double number2double = number2;
+                        double normalQuotient = number1double / number2double;
 
-            //Alternatively
-            double normalQuotientAlt = (double)number1 / (double)number2;
+                        //Alternatively
+                        double normalQuotientAlt = (double)number1 / (double)number2;
 
-            //Outputs
-            Console.WriteLine("----------------");
-            Console.WriteLine("Interger quotient: " + intergerQuotient
-                + " with remainder " + remainder);
-            Console.WriteLine("\"Normal\" quotient: " + normalQuotient);
-            Console.WriteLine("\"Normal\" quotient(alernatively): " + normalQuotientAlt);
-*/
-           
-/*            //Math Rounding
-            double num1 = 1234.567;
-            double num2 = 9.876;
-            
-            //Number rounding
-            double roundedNum1 = Math.Round(num1, 2); //2 = two decimal places
-            
-            //Rounding for output only
-            string outputRounded2 = num2.ToString("N2");
+                        //Outputs
+                        Console.WriteLine("----------------");
+                        Console.WriteLine("Interger quotient: " + intergerQuotient
+                            + " with remainder " + remainder);
+                        Console.WriteLine("\"Normal\" quotient: " + normalQuotient);
+                        Console.WriteLine("\"Normal\" quotient(alernatively): " + normalQuotientAlt);
+            */
 
-            Console.WriteLine(roundedNum1);
-            Console.WriteLine(outputRounded2);
-*/
- /*           //More complicated rounding
-            double amount = 1234.562;
+            /*            //Math Rounding
+                        double num1 = 1234.567;
+                        double num2 = 9.876;
 
-            //To dollars 
-            double nearest = Math.Round(amount);
-            double alwaysUp = Math.Ceiling(amount);
-            double alwaysDown = Math.Floor(amount);
+                        //Number rounding
+                        double roundedNum1 = Math.Round(num1, 2); //2 = two decimal places
 
-            Console.WriteLine();
-            Console.WriteLine("To Dollars:");
-            Console.WriteLine("Nearest: " + nearest);
-            Console.WriteLine("Always Down: " +alwaysDown);
-            Console.WriteLine("Always Up: " +alwaysUp);
+                        //Rounding for output only
+                        string outputRounded2 = num2.ToString("N2");
 
-            //To Cents
-            nearest = Math.Round(amount, 2);
-            alwaysUp = Math.Ceiling(100 * amount) / 100;
-            alwaysDown = Math.Floor(100 * amount) / 100;
+                        Console.WriteLine(roundedNum1);
+                        Console.WriteLine(outputRounded2);
+            */
+            /*           //More complicated rounding
+                       double amount = 1234.562;
 
-            Console.WriteLine();
-            Console.WriteLine("To Cents:");
-            Console.WriteLine("Nearest: " + nearest);
-            Console.WriteLine("Always Down: " + alwaysDown);
-            Console.WriteLine("Always Up: " + alwaysUp);
+                       //To dollars 
+                       double nearest = Math.Round(amount);
+                       double alwaysUp = Math.Ceiling(amount);
+                       double alwaysDown = Math.Floor(amount);
 
-            //To hundreds of dollars
-            nearest = 100 * Math.Round(amount / 100);
-            alwaysDown = 100 * Math.Floor(amount / 100);
-            alwaysUp = 100 * Math.Ceiling(amount / 100);
+                       Console.WriteLine();
+                       Console.WriteLine("To Dollars:");
+                       Console.WriteLine("Nearest: " + nearest);
+                       Console.WriteLine("Always Down: " +alwaysDown);
+                       Console.WriteLine("Always Up: " +alwaysUp);
 
-            Console.WriteLine();
-            Console.WriteLine("To hundreds of dollars:");
-            Console.WriteLine("Nearest: " + nearest);
-            Console.WriteLine("Always Down: " + alwaysDown);
-            Console.WriteLine("Always Up: " + alwaysUp);
-*/
+                       //To Cents
+                       nearest = Math.Round(amount, 2);
+                       alwaysUp = Math.Ceiling(100 * amount) / 100;
+                       alwaysDown = Math.Floor(100 * amount) / 100;
+
+                       Console.WriteLine();
+                       Console.WriteLine("To Cents:");
+                       Console.WriteLine("Nearest: " + nearest);
+                       Console.WriteLine("Always Down: " + alwaysDown);
+                       Console.WriteLine("Always Up: " + alwaysUp);
+
+                       //To hundreds of dollars
+                       nearest = 100 * Math.Round(amount / 100);
+                       alwaysDown = 100 * Math.Floor(amount / 100);
+                       alwaysUp = 100 * Math.Ceiling(amount / 100);
+
+                       Console.WriteLine();
+                       Console.WriteLine("To hundreds of dollars:");
+                       Console.WriteLine("Nearest: " + nearest);
+                       Console.WriteLine("Always Down: " + alwaysDown);
+                       Console.WriteLine("Always Up: " + alwaysUp);
+           */
+            //Ch11 - Calculations with Dates
+
+            try
+            {
+                // Text input of date
+                Console.Write("Enter date: ");
+                string input = Console.ReadLine();
+                // Conversion to DateTime object
+                DateTime enteredDate = Convert.ToDateTime(input);
+                // Some calculations
+                DateTime followingDay = enteredDate.AddDays(1);
+                DateTime previousDay = enteredDate.AddDays(-1);
+                // Outputs
+                Console.WriteLine();
+                Console.WriteLine("Entered day : " + enteredDate.
+                ToLongDateString());
+                Console.WriteLine("Following day: " + followingDay.
+                ToLongDateString());
+                Console.WriteLine("Previous day : " + previousDay.
+                ToLongDateString());
+
+                //Extracting Quarter of entered date
+                int enteredMonth = enteredDate.Month;
+                int enteredYear = enteredDate.Year;
+
+                int quarter = (enteredMonth + 2) / 3;
+
+                Console.WriteLine("Quarter of Entered Date: " + quarter);
+
+            }
+            catch (Exception)
+            {
+                // Treating incorrect input
+                Console.WriteLine("Incorrect input");
+
+                //Waiting for Enter
+                Console.ReadLine();
+            }
 
 
-            //
-
-            //Waiting for Enter
-            Console.ReadLine();
         }
     }
 }
