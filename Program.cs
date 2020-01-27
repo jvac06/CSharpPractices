@@ -373,11 +373,12 @@ namespace CSharpPractices
             {
                 // Treating incorrect input
                 Console.WriteLine("Incorrect input");
-
-                //Waiting for Enter
-                Console.ReadLine();
             }
 
+            //Use TimeSpan object to do timespan calculations between two dates
+
+            //Waiting for Enter
+            Console.ReadLine();
 
         }
     }
