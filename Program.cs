@@ -339,131 +339,174 @@ namespace CSharpPractices
                        Console.WriteLine("Always Down: " + alwaysDown);
                        Console.WriteLine("Always Up: " + alwaysUp);
            */
-        /*            //Ch11 - Calculations with Dates
+            /*            //Ch11 - Calculations with Dates
 
-                    try
-                    {
-                        // Text input of date
-                        Console.Write("Enter date: ");
-                        string input = Console.ReadLine();
-                        // Conversion to DateTime object
-                        DateTime enteredDate = Convert.ToDateTime(input);
-                        // Some calculations
-                        DateTime followingDay = enteredDate.AddDays(1);
-                        DateTime previousDay = enteredDate.AddDays(-1);
-                        // Outputs
-                        Console.WriteLine();
-                        Console.WriteLine("Entered day : " + enteredDate.
-                        ToLongDateString());
-                        Console.WriteLine("Following day: " + followingDay.
-                        ToLongDateString());
-                        Console.WriteLine("Previous day : " + previousDay.
-                        ToLongDateString());
+                        try
+                        {
+                            // Text input of date
+                            Console.Write("Enter date: ");
+                            string input = Console.ReadLine();
+                            // Conversion to DateTime object
+                            DateTime enteredDate = Convert.ToDateTime(input);
+                            // Some calculations
+                            DateTime followingDay = enteredDate.AddDays(1);
+                            DateTime previousDay = enteredDate.AddDays(-1);
+                            // Outputs
+                            Console.WriteLine();
+                            Console.WriteLine("Entered day : " + enteredDate.
+                            ToLongDateString());
+                            Console.WriteLine("Following day: " + followingDay.
+                            ToLongDateString());
+                            Console.WriteLine("Previous day : " + previousDay.
+                            ToLongDateString());
 
-                        //Extracting Quarter of entered date
-                        int enteredMonth = enteredDate.Month;
-                        int enteredYear = enteredDate.Year;
+                            //Extracting Quarter of entered date
+                            int enteredMonth = enteredDate.Month;
+                            int enteredYear = enteredDate.Year;
 
-                        int quarter = (enteredMonth + 2) / 3;
+                            int quarter = (enteredMonth + 2) / 3;
 
-                        Console.WriteLine("Quarter of Entered Date: " + quarter);
+                            Console.WriteLine("Quarter of Entered Date: " + quarter);
 
-                    }
-                    catch (Exception)
-                    {
-                        // Treating incorrect input
-                        Console.WriteLine("Incorrect input");
-                    }
+                        }
+                        catch (Exception)
+                        {
+                            // Treating incorrect input
+                            Console.WriteLine("Incorrect input");
+                        }
 
-                    //Use TimeSpan object to do timespan calculations between two dates
+                        //Use TimeSpan object to do timespan calculations between two dates
 
-                    //Waiting for Enter
-                    Console.ReadLine();
-                    */
+                        //Waiting for Enter
+                        Console.ReadLine();
+                        */
 
             //Chapter 19
             //PREPARATIONS
-            string errorMessage = "Incorrect input";
-            int mathematics, informationTechnology, science, english;
-            bool hasUnexcusedAbsences;
+            /*            string errorMessage = "Incorrect input";
+                        int mathematics, informationTechnology, science, english;
+                        bool hasUnexcusedAbsences;
 
-            //INPUTS
-            try
-            {
-                Console.WriteLine("Enter grades from individual subjects:");
+                        //INPUTS
+                        try
+                        {
+                            Console.WriteLine("Enter grades from individual subjects:");
 
-                Console.Write("Mathematics: ");
-                string input = Console.ReadLine();
-                mathematics = Convert.ToInt32(input);
-                if (mathematics < 1 || mathematics > 5)
-                {
-                    Console.WriteLine(errorMessage);
-                    return;
-                }
-                Console.Write("Information technology: ");
-                input = Console.ReadLine();
-                informationTechnology = Convert.ToInt32(input);
-                if (informationTechnology < 1 || informationTechnology > 5)
-                {
-                    Console.WriteLine(errorMessage);
-                    return;
-                }
-                Console.Write("Science: ");
-                input = Console.ReadLine();
-                science = Convert.ToInt32(input);
-                if (science < 1 || science > 5)
-                {
-                    Console.WriteLine(errorMessage);
-                    return;
-                }
-                Console.Write("English: ");
-                input = Console.ReadLine();
-                english = Convert.ToInt32(input);
-                if (english < 1 || english > 5)
-                {
-                    Console.WriteLine(errorMessage);
-                    return;
-                }
-                Console.Write("Any unexcused absences? (yes/no): ");
-                input = Console.ReadLine();
-                input = input.ToLower();
-                if (input != "yes" && input != "no")
-                {
-                    Console.WriteLine(errorMessage);
-                    return;
-                }
-                hasUnexcusedAbsences = input == "yes";
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(errorMessage);
-                return;
-            }
+                            Console.Write("Mathematics: ");
+                            string input = Console.ReadLine();
+                            mathematics = Convert.ToInt32(input);
+                            if (mathematics < 1 || mathematics > 5)
+                            {
+                                Console.WriteLine(errorMessage);
+                                return;
+                            }
+                            Console.Write("Information technology: ");
+                            input = Console.ReadLine();
+                            informationTechnology = Convert.ToInt32(input);
+                            if (informationTechnology < 1 || informationTechnology > 5)
+                            {
+                                Console.WriteLine(errorMessage);
+                                return;
+                            }
+                            Console.Write("Science: ");
+                            input = Console.ReadLine();
+                            science = Convert.ToInt32(input);
+                            if (science < 1 || science > 5)
+                            {
+                                Console.WriteLine(errorMessage);
+                                return;
+                            }
+                            Console.Write("English: ");
+                            input = Console.ReadLine();
+                            english = Convert.ToInt32(input);
+                            if (english < 1 || english > 5)
+                            {
+                                Console.WriteLine(errorMessage);
+                                return;
+                            }
+                            Console.Write("Any unexcused absences? (yes/no): ");
+                            input = Console.ReadLine();
+                            input = input.ToLower();
+                            if (input != "yes" && input != "no")
+                            {
+                                Console.WriteLine(errorMessage);
+                                return;
+                            }
+                            hasUnexcusedAbsences = input == "yes";
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine(errorMessage);
+                            return;
+                        }
 
-            //EVALUATIONS
-            double average = (mathematics + informationTechnology + science + english) / 4.0;
-            string message;
+                        //EVALUATIONS
+                        double average = (mathematics + informationTechnology + science + english) / 4.0;
+                        string message;
 
-            //testing for EXCELLENCE
-            if (average< 1.5001 && mathematics <= 2 && informationTechnology <= 2 && science <= 2
-                && english <= 2 && !hasUnexcusedAbsences)
+                        //testing for EXCELLENCE
+                        if (average< 1.5001 && mathematics <= 2 && informationTechnology <= 2 && science <= 2
+                            && english <= 2 && !hasUnexcusedAbsences)
+                        {
+                            message = "Excellent";
+                        }
+                        else
+                        {
+                            //testing if good
+                            if (mathematics == 5|| informationTechnology ==5 || science == 5 || english == 5)
+                            {
+                                message = "Failed";
+                            }
+                            else
+                            {
+                                message = "Good";
+                            }
+                        }
+                        //OUTPUT
+                        Console.WriteLine("Summary Evaluation: " + message);
+            */
+            //Chapter 25
+            //Sine Advanced Loop
+
+            Console.Write("Enter an angle in degrees: ");
+            string input = Console.ReadLine();
+            double angle = Convert.ToInt32(input);
+
+            //Converting to radians
+            double x = (Math.PI / 180) * angle;
+
+            //Preparations
+            double member;
+            double sum = 0;
+            double tinyValue = 1e-15;
+
+            double sign = 1;
+            double power = x;
+            double factorial = 1;
+            double multiplier = 1;
+
+            //Sum of the series
+            do
             {
-                message = "Excellent";
-            }
-            else
-            {
-                //testing if good
-                if (mathematics == 5|| informationTechnology ==5 || science == 5 || english == 5)
-                {
-                    message = "Failed";
-                }
-                else
-                {
-                    message = "Good";
-                }
-            }
-            //OUTPUT
-            Console.WriteLine("Summary Evaluation: " + message);
+                //Calculating current member of the series
+                member = sign * power / factorial;
+
+                //Appending to sum
+                sum += member;
+
+                //Prepareing next step
+                sign *= -1;
+                multiplier++;
+                factorial *= multiplier;
+                multiplier++;
+                factorial *= multiplier;
+
+                power *= x * x;
+            } while (Math.Abs(member) > tinyValue);
+
+            //output
+            Console.WriteLine("Our value: " + sum.ToString());
+            Console.WriteLine("Math.Sin: " + Math.Sin(x).ToString());
         }
     }
 }
